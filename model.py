@@ -33,11 +33,10 @@ def drop_piece(board, column, player):
     if row == -1:
         raise ValueError 
 
-    update = make_empty_board()
+    update = board.copy()
     update[row, column] = player
-    res = board + update
 
-    return res
+    return update
 
 # Step 4 - column_full (not yet solved)
 # TODO: implement
