@@ -46,8 +46,19 @@ def column_full(board, column):
     # TODO: check whether the column can still accept a piece
     return column_top_row(board, column) == -1
 
-# Step 5 - valid_moves (not yet solved)
-# TODO: implement
+# Step 5 - valid_moves
+def valid_moves(board):
+    # TODO: return a list of column indices that still have at least one empty row
+    res = []
+    
+    shape = board.shape
+
+    for i in range(shape[1]):
+        if not column_full(board, i):
+            res.append(i)
+
+
+    return res
 
 # Step 6 - four_in_a_row_horizontal (not yet solved)
 # TODO: implement
